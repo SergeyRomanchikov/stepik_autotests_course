@@ -38,3 +38,6 @@ class ProductPage(BasePage):
 
     def is_success_message_after_adding_product_to_basket_not_present(self):
         assert self.is_not_element_present(*ProductPageLocators.CONFIRM_ALERT)
+
+    def is_success_message_after_adding_product_to_basket_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.CONFIRM_ALERT)
