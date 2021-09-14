@@ -35,3 +35,6 @@ class ProductPage(BasePage):
 
     def is_product_name_in_alert_equals_product_name(self):
         assert self.get_product_name() == self.get_product_name_from_alert()
+
+    def is_success_message_after_adding_product_to_basket_not_present(self):
+        assert self.is_not_element_present(*ProductPageLocators.CONFIRM_ALERT)
